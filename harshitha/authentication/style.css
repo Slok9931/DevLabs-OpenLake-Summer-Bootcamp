@@ -23,7 +23,7 @@ h1 {
 }
 
 .form-group {
-    display: flex;
+    
     flex-direction: column;
     margin-bottom: 15px;
 }
@@ -51,8 +51,8 @@ input:focus {
 button {
     width: 30%;
     padding: 12px;
-    background-color: white;
-    color: #4CAF50;
+    background-color: #4CAF50;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     border: none;
@@ -62,33 +62,22 @@ button {
 }
 
 button:hover {
-    background-color: #e6e6e6;
-}
-.box-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
-    flex-wrap: wrap; /* responsive */
+    background-color: black;
 }
 
-.box {
-    width: 220px;
-    height: 180px;
-    background-color: #4CAF50;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+.row-style {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    transition: transform 0.3s ease;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-.box:hover {
-    transform: scale(1.05);
+.row-style p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.row-style button {
+    flex-shrink: 0;
 }

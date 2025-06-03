@@ -8,13 +8,15 @@
 </head>
 <body>
     <h1>Login Page</h1>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required placeholder="Enter username">
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required placeholder="Enter password"> 
-        <br><br>
+    <form class="form-container">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter username">
+        </div>
+        <div class="form-group">     
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter password"> 
+        </div>
         <button type="submit">Login</button>
     </form>
     <p>Don't have an account? <a href="SignUp.html">Sign Up</a></p>
