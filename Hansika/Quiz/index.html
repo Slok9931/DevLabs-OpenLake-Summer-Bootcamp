@@ -34,17 +34,21 @@
             <input type="number" id="crct" name="crct" min="1" max="4" required>
         </label><br>
         <!-- i need a submit button also -->
-        <br><button type="submit">Save your Question</button><br>
-
+      
+<br><button type="submit">Save your Question</button><br>
     </form>
     <!-- i have created the form DONE!!!! -->
 <!-- also i have to create another page and link this page to that -->
+ 
+   
  <a href="quiz.html">Go to quiz page</a>
 
  </div>
  
 
 <script>
+    
+
     const qform=document.getElementById("quizform");
     qform.addEventListener("submit",(e)=>{
         e.preventDefault();
@@ -59,13 +63,20 @@
         const correct=parseInt(document.getElementById("crct").value)-1;
         const newQuestion={question,options,correct};
        
-        let quizData=JSON.parse(localStorage.getItem("quizData")) || [];
+       let quizData;
+try {
+  quizData = JSON.parse(localStorage.getItem("quizData"));
+  if (!Array.isArray(quizData)) quizData = [];
+} catch (e) {
+  quizData = [];
+}
 
         
        quizData.push(newQuestion);
        localStorage.setItem("quizData",JSON.stringify(quizData));
-      
+      console.log("Saved data:", quizData);
         alert("Quiz Saved!!!");
+        
         qform.reset();
     });
 </script>

@@ -1,0 +1,20 @@
+*{
+   
+    padding: 0;
+    margin: 0;
+font-family: 'Exo 2';
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    gap: 5px;
+ background-color: #b2967d;
+}
+#quizContainer{
+    background-color: #e6beae;
+margin: 54px;
+padding: 67px;
+}
