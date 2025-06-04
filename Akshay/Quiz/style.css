@@ -60,3 +60,24 @@ button {
 button:hover {
     background-color: #555;
 }
+
+.dotted-box {
+    border: 2px dashed #aaa;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #555;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dotted-box:hover {
+    background-color: #f2f2f2;
+}
+
+.question-block button {
+    margin-top: 10px;
+}
