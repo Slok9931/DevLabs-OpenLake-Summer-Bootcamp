@@ -1,90 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <title>Create Quiz</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
     <h1>Create a Quiz</h1>
-    <form>
-        
-        <div class="question-block">
-            <label><span>Question 1:</span>
-                <input type="text" placeholder="Enter the question" class="question-input" />
-            </label>
-            <label><span>Option 1:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 2:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 3:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 4:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-        </div>
+    <div id="questions-container"></div>
+    <div class="dotted-box" onclick="addQuestion()">+ Create Question</div>
 
-        <div class="question-block">
-            <label><span>Question 2:</span>
-                <input type="text" placeholder="Enter the question" class="question-input" />
-            </label>
-            <label><span>Option 1:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 2:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 3:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 4:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-        </div>
+    <button onclick="generateQuiz()">Generate Quiz</button>
 
-        <div class="question-block">
-            <label><span>Question 3:</span>
-                <input type="text" placeholder="Enter the question" class="question-input" />
-            </label>
-            <label><span>Option 1:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 2:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 3:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 4:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-        </div>
+    <script src="script.js">
 
-        <div class="question-block">
-            <label><span>Question 4:</span>
-                <input type="text" placeholder="Enter the question" class="question-input" />
-            </label>
-            <label><span>Option 1:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 2:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 3:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-            <label><span>Option 4:</span>
-                <input type="text" placeholder="Add option" class="option-input" />
-            </label>
-        </div>
-
-        <button type="submit">Save All</button>
-    </form>
-
-    <a href="display.html">Go to Quiz Page</a>
+    </script>
 </body>
 
 </html>
