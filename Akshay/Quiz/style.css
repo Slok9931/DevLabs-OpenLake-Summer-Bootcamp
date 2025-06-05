@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(225, 225, 225);
@@ -9,7 +10,6 @@ h1 {
     color: #333;
     margin-bottom: 25px;
 }
-
 
 .question-box {
     background-color: white;
@@ -23,7 +23,8 @@ h1 {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid rgb(103, 104, 105);
-    border-radius: 15px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .question-block label {
@@ -41,10 +42,17 @@ h1 {
 
 .question-input,
 .option-input {
-    flex: 1;
-    padding: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
     border: 1px solid rgb(225, 225, 225);
     border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.question-input {
+    margin-bottom: 5px;
 }
 
 button {
@@ -77,6 +85,7 @@ button:hover {
 .dotted-box:hover {
     background-color: #f2f2f2;
 }
+
 
 .question-block button {
     margin-top: 10px;
