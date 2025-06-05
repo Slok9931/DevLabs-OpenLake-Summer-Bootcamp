@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Create Quiz</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Create a Quiz (Static Form)</h1>
-  <form>
-    <label>Question:</label><br>
-    <input type="text" placeholder="Enter your question"><br><br>
+    <h1>Create a Question</h1>
+    <form id="quizForm">
+        <label>Question:</label><br>
+        <input type="text" id="question"><br><br>
 
-    <label>Option A:</label><br>
-    <input type="text"><br><br>
+        <label>Option A:</label><br>
+        <input type="text" id="optA"><br><br>
 
-    <label>Option B:</label><br>
-    <input type="text"><br><br>
+        <label>Option B:</label><br>
+        <input type="text" id="optB"><br><br>
 
-    <label>Option C:</label><br>
-    <input type="text"><br><br>
+        <label>Option C:</label><br>
+        <input type="text" id="optC"><br><br>
 
-    <label>Option D:</label><br>
-    <input type="text"><br><br>
+        <label>Option D:</label><br>
+        <input type="text" id="optD"><br><br>
 
-    <label>Correct Option:</label><br>
-    <select>
-      <option value="A">A</option>
-      <option value="B">B</option>
-      <option value="C">C</option>
-      <option value="D">D</option>
-    </select><br><br>
+        <label>Correct Option (A/B/C/D):</label><br>
+        <input type="text" id="correct"><br><br>
 
-    <input type="submit" value="Save (no effect)">
-  </form>
+        <button type="submit">Save Question</button>
+    </form>
+    <br>
+    <a href="quiz.html">Go to Quiz</a>
 
-  <p><a href="quiz.html">Go to Quiz Page</a></p>
+    <script src="script.js"></script>
 </body>
 </html>
+
