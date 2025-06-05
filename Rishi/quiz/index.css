@@ -1,0 +1,151 @@
+/* --- General Reset and Body Styling --- */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e7ff;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+/* --- Form Styling --- */
+.quiz-box {
+    background: rgba(30, 52, 95, 0.9);
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(46, 49, 65, 0.9);
+    max-width: 650px;
+    width: 100%;
+}
+
+.question {
+    margin-bottom: 28px;
+}
+
+.question p {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* --- Questions List Styling --- */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+/* --- Hide Native Radio --- */
+.quiz-box input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* --- Custom Radio Styling --- */
+.quiz-box label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 38px;
+    user-select: none;
+    font-size: 1rem;
+    color: #cfd9ff;
+    transition: color 0.3s ease;
+}
+
+/* Outer circle */
+.quiz-box label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 3px solid #6ea0ff;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 8px rgba(110, 160, 255, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+/* Inner fill circle */
+.quiz-box label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6ea0ff;
+    box-shadow: 0 0 15px #6ea0ff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Checked radio styling */
+.quiz-box input[type="radio"]:checked + label {
+    color: #a8c1ff;
+    font-weight: 700;
+}
+
+.quiz-box input[type="radio"]:checked + label::after {
+    opacity: 1;
+}
+
+/* Hover effect on labels */
+.quiz-box label:hover {
+    color: #9ec1ff;
+    border-color: #9ec1ff;
+}
+
+.quiz-box label:hover::before {
+    border-color: #9ec1ff;
+}
+
+/* Submit button styling */
+.quiz-box button[type="submit"] {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 14px 40px;
+    background: #4a7cff;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(74,124,255,0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-box button[type="submit"]:hover {
+    background: #3a66d1;
+    box-shadow: 0 8px 20px rgba(58,102,209,0.8);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .quiz-box {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
