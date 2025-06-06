@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
+</head>
+
+<body>
+    <h1>Quiz</h1>
+    <div id="quizContainer"></div>
+    <button onclick="submitAnswer()">Submit my answer</button>
+    <p id="result"></p>
+
+    <script>
+        const quiz = JSON.parse(localStorage.getItem("quizData"));
+        const container = document.getElementById("quizContainer")
+        if (quiz && quiz.length) {
+        // i have to loop through the questions also
+        // so
+        const html=quiz.map( (q,qIndex)=>`
+            <div class="question-block">
+<p><strong>Q${qIndex+1}:</strong>${q.question}</p>
+${q.options.map((opt,i)=>`
+<br><label> 
+    <input type="radio" name="answer-${qIndex}" value="${i}">
+${opt}</label><br>`).join('')}
+
+   </div>`).join('');
+   container.innerHTML=html;
+}else{
+    container.innerHTML="<p>No Quiz Available.Go back and create it!!";
+}
+            
+        //now i have to write a function which checks if the checked option is coorect or not
+        function submitAnswer() {
+            const result=document.getElementById("result");
+            const quiz=JSON.parse(localStorage.getItem("quizData"));
+            let score=0;
+            quiz.forEach( (q,qIndex) => {
+                const selected=document.querySelector(`input[name="answer-${qIndex}"]:checked`);
+                if(selected && parseInt(selected.value)==q.correct){
+                    score++;
+                }
+            });
+            result.textContent=`You scored ${score} out of ${quiz.length}`;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* General Page Settings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 1em;
+    color: #555;
+}
+
+a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 1.8em;
+    color: #1a237e;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+
+/* Articles (Experience, Education) */
+article {
+    margin-bottom: 30px;
+}
+
+article h3 {
+    color: #34495e;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+article p {
+    margin: 5px 0;
+}
+
+/* Skills List */
+ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 6px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    article h3 {
+        font-size: 1.2em;
+    }
+
+    header p, article p, ul li {
+        font-size: 0.95em;
+    }
+}
+

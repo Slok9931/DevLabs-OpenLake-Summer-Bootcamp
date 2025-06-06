@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(225, 225, 225);
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.question-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.question-block {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgb(103, 104, 105);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.question-block label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
+}
+
+.question-block label span {
+    white-space: nowrap;
+    width: 80px;
+}
+
+.question-input,
+.option-input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.question-input {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.dotted-box {
+    border: 2px dashed #aaa;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: white;
+    color: #555;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.dotted-box:hover {
+    background-color: #f2f2f2;
+}
+
+
+.question-block button {
+    margin-top: 10px;
+}

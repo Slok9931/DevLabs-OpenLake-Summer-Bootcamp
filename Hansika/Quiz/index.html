@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+</style>
+</head>
+
+<body>
+    <!-- i have to creaTe a form which will take input the question the 4 options and the correct answer -->
+     <div class="box">
+    <h1>Create a quiz question</h1>
+    <form id="quizform" >
+        <br> <label for="question">Enter your Question:
+            <input type="text" id="question" name="question" required></label><br>
+        <br><label for="option1">Enter your first option:
+            <input type="text" id="option1" name="option1" required>
+        </label><br>
+        <br><label for="option2">Enter your second option:
+            <input type="text" id="option2" name="option2" required>
+        </label><br>
+        <br><label for="option3">Enter your third option:
+            <input type="text" id="option3" name="option3" required>
+        </label><br>
+        <br><label for="option4">Enter your fourth option:
+            <input type="text" id="option4" name="option4" required>
+        </label><br>
+        <br><label for="crct">Enter the correct option :
+            <input type="number" id="crct" name="crct" min="1" max="4" required>
+        </label><br>
+        <!-- i need a submit button also -->
+      
+<br><button type="submit">Save your Question</button><br>
+    </form>
+    <!-- i have created the form DONE!!!! -->
+<!-- also i have to create another page and link this page to that -->
+ 
+   
+ <a href="quiz.html">Go to quiz page</a>
+
+ </div>
+ 
+
+<script>
+    
+
+    const qform=document.getElementById("quizform");
+    qform.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        const question=document.getElementById("question").value;
+        const options =[
+            document.getElementById("option1").value,
+            document.getElementById("option2").value,
+            document.getElementById("option3").value,
+            document.getElementById("option4").value,
+
+        ];
+        const correct=parseInt(document.getElementById("crct").value)-1;
+        const newQuestion={question,options,correct};
+       
+       let quizData;
+try {
+  quizData = JSON.parse(localStorage.getItem("quizData"));
+  if (!Array.isArray(quizData)) quizData = [];
+} catch (e) {
+  quizData = [];
+}
+
+        
+       quizData.push(newQuestion);
+       localStorage.setItem("quizData",JSON.stringify(quizData));
+      console.log("Saved data:", quizData);
+        alert("Quiz Saved!!!");
+        
+        qform.reset();
+    });
+</script>
+</body>
+</html>

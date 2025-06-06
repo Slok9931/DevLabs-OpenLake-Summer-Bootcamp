@@ -1,0 +1,19 @@
+body{
+  background-color: skyblue;
+  font-family: Arial, sans-serif;
+text-align: center;
+text-transform: uppercase;
+padding: 100px;
+border:100px;
+border-color: black;
+margin:10px;
+}
+
+#ayush {
+    color: black;
+    font-size: 50px;
+    border: 10px solid red; /* Added 'solid' here */
+    border-radius: 100px;
+    font-weight: bold;
+    padding:10px
+}

@@ -1,0 +1,87 @@
+
+/* #quizform {
+    display: flex
+;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+} */
+* {
+    /* background-color: beige; */
+    margin: 0px;
+    padding: 0px;
+   font-family: 'Exo 2';
+}
+
+
+body{
+    background-color: #b2967d;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ min-height: 100vh;   
+}
+.box{
+    background-color: #e6beae;
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 60px;
+    border: 2px solid black;
+    justify-content: center;
+    border-radius: 65px;
+    align-items: center;
+}
+
+label{
+    display: block;
+    /* margin: 45px; */
+    font-weight: bold;
+}
+input[type="text"]
+input[type="number"]{
+  border: 2px solid black;
+  padding: 34px;
+  margin: 34px;
+}
+button{
+    background-color: #e7d8c9;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 15px;
+   
+    margin-left: 9px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 27px;
+    cursor: pointer;
+
+}
+button:hover{
+    color: #b2967d;
+}
+a{
+    border: 2px solid black;
+    text-decoration: none;
+   
+    background-color: #e7d8c9;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0px 0px;
+
+}
+
+a:link{
+    color: black;
+
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: #b2967d;
+}
