@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>Welcome to Quiz App</h1>
-    
+
     <nav>
       <a href="quiz.html">Take Quiz</a>
     </nav>
@@ -16,7 +16,7 @@
     <hr>
 
     <h2>Create a Quiz</h2>
-    <form>
+    <form id="createForm">
       <label>Question:
         <input type="text" placeholder="Enter your question" required>
       </label><br><br>
@@ -50,5 +50,34 @@
       <button type="submit">Add Question</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("createForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const question = document.querySelector('input[placeholder="Enter your question"]').value;
+      const inputs = document.querySelectorAll('input');
+      const options = [inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value];
+      const correct = document.querySelector('select').value;
+
+      const newQuestion = {
+        question: question,
+        options: {
+          A: options[0],
+          B: options[1],
+          C: options[2],
+          D: options[3]
+        },
+        correct: correct
+      };
+
+      const quizData = JSON.parse(localStorage.getItem("quizData") || "[]");
+      quizData.push(newQuestion);
+      localStorage.setItem("quizData", JSON.stringify(quizData));
+
+      alert("Question added!");
+      this.reset();
+    });
+  </script>
 </body>
 </html>

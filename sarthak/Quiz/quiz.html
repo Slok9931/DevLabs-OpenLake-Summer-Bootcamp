@@ -7,44 +7,69 @@
 <body>
 
   <div class="container quiz">
-    <h1>Simple Quiz</h1>
-    <form>
+    <h1>Quiz</h1>
+    <p id="timer">Time: 0 seconds</p>
 
-      <div class="question">
-        <p>1. What is the capital of India?</p>
-        <label><input type="radio" name="q1" value="A"> Mumbai</label>
-        <label><input type="radio" name="q1" value="B"> Kolkata</label>
-        <label><input type="radio" name="q1" value="C"> New Delhi</label>
-        <label><input type="radio" name="q1" value="D"> Chennai</label>
-      </div>
-
-      <div class="question">
-        <p>2. Which planet is known as the Red Planet?</p>
-        <label><input type="radio" name="q2" value="A"> Earth</label>
-        <label><input type="radio" name="q2" value="B"> Mars</label>
-        <label><input type="radio" name="q2" value="C"> Jupiter</label>
-        <label><input type="radio" name="q2" value="D"> Venus</label>
-      </div>
-
-      <div class="question">
-        <p>3. What is 5 × 6?</p>
-        <label><input type="radio" name="q3" value="A"> 11</label>
-        <label><input type="radio" name="q3" value="B"> 20</label>
-        <label><input type="radio" name="q3" value="C"> 30</label>
-        <label><input type="radio" name="q3" value="D"> 60</label>
-      </div>
-
-      <div class="question">
-        <p>4. Which language is used for web development?</p>
-        <label><input type="radio" name="q4" value="A"> HTML</label>
-        <label><input type="radio" name="q4" value="B"> C++</label>
-        <label><input type="radio" name="q4" value="C"> Python</label>
-        <label><input type="radio" name="q4" value="D"> Java</label>
-      </div>
-
-      <button type="submit">Submit</button>
-    </form>
+    <form id="quizForm"></form>
+    <div id="result"></div>
   </div>
+
+  <script>
+    let seconds = 0;
+    let timerInterval;
+
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        seconds++;
+        document.getElementById("timer").textContent = "Time: " + seconds + " seconds";
+      }, 1000);
+    }
+
+    function loadQuestions() {
+      const quizData = JSON.parse(localStorage.getItem("quizData") || "[]");
+      const form = document.getElementById("quizForm");
+
+      if (quizData.length === 0) {
+        form.innerHTML = "<p>No questions found. Please add some from the homepage.</p>";
+        return;
+      }
+
+      quizData.forEach((q, index) => {
+        const div = document.createElement("div");
+        div.className = "question";
+        div.innerHTML = `<p>${index + 1}. ${q.question}</p>
+          <label><input type="radio" name="q${index}" value="A"> ${q.options.A}</label>
+          <label><input type="radio" name="q${index}" value="B"> ${q.options.B}</label>
+          <label><input type="radio" name="q${index}" value="C"> ${q.options.C}</label>
+          <label><input type="radio" name="q${index}" value="D"> ${q.options.D}</label>`;
+        form.appendChild(div);
+      });
+
+      const button = document.createElement("button");
+      button.type = "submit";
+      button.textContent = "Submit";
+      form.appendChild(button);
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        clearInterval(timerInterval);
+        let score = 0;
+
+        quizData.forEach((q, i) => {
+          const selected = document.querySelector(`input[name=q${i}]:checked`);
+          if (selected && selected.value === q.correct) score++;
+        });
+
+        document.getElementById("result").textContent =
+          `You scored ${score} out of ${quizData.length} in ${seconds} seconds.`;
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadQuestions();
+      startTimer();
+    });
+  </script>
 
 </body>
 </html>
