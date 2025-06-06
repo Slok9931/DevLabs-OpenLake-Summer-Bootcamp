@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Create a New Quiz</h1>
+    <form class="form-box" id="quizForm">
+        <input type="text" id="quizTitle" placeholder="Enter Quiz Title" required>
+        <input type="number" id="quizTime" placeholder="Enter Time Limit (minutes)" required>
+        <input type="number" id="quizScore" placeholder="Enter Total Score" required>
+
+        <h3>Add Questions</h3>
+        <div id="questionsContainer"></div>
+        <button type="button" onclick="addQuestion()">+ Add Question</button>
+        <button type="submit">Save Quiz</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
