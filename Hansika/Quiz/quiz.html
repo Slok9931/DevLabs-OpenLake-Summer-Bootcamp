@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <h1>Quiz</h1>
+    <h1>Take Your Quiz!!!!</h1>
     <div id="quizContainer"></div>
-    <button onclick="submitAnswer()">Submit my answer</button>
+    <button onclick="submitAnswer()">Submit my answers !!!</button>
     <p id="result"></p>
 
     <script>
@@ -25,7 +25,7 @@
         // so
         const html=quiz.map( (q,qIndex)=>`
             <div class="question-block">
-<p><strong>Q${qIndex+1}:</strong>${q.question}</p>
+<p><strong>Q${qIndex+1}: </strong>${q.question}</p>
 ${q.options.map((opt,i)=>`
 <br><label> 
     <input type="radio" name="answer-${qIndex}" value="${i}">
@@ -34,7 +34,9 @@ ${opt}</label><br>`).join('')}
    </div>`).join('');
    container.innerHTML=html;
 }else{
-    container.innerHTML="<p>No Quiz Available.Go back and create it!!";
+    container.innerHTML="<p>OOPS !! No Quiz Available.Go back and create it !!</p> ";
+    
+        
 }
             
         //now i have to write a function which checks if the checked option is coorect or not
@@ -48,7 +50,7 @@ ${opt}</label><br>`).join('')}
                     score++;
                 }
             });
-            result.textContent=`You scored ${score} out of ${quiz.length}`;
+            result.textContent=`You scored ${score} out of ${quiz.length} !!!!`;
         }
 
 

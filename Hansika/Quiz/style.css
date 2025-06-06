@@ -54,10 +54,10 @@ button{
     border-radius: 20px;
     padding: 15px;
    
-    margin-left: 9px;
+    margin-left: -6px;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-right: 27px;
+    margin-right: 14px;
     cursor: pointer;
 
 }
@@ -74,7 +74,10 @@ a{
     margin: 0px 0px;
 
 }
-
+.btns{
+    display: flex;
+    gap: 5px;
+}
 a:link{
     color: black;
 
@@ -85,3 +88,4 @@ a:visited{
 a:hover{
     color: #b2967d;
 }
+
