@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container" id="login-container">
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#" onclick="toggleForm('signup')">Sign Up</a></p>
+      </form>
+    </div>
+
+    <div class="form-container hidden" id="signup-container">
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+        <p>Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm(type) {
+      const login = document.getElementById('login-container');
+      const signup = document.getElementById('signup-container');
+      if (type === 'signup') {
+        login.classList.add('hidden');
+        signup.classList.remove('hidden');
+      } else {
+        signup.classList.add('hidden');
+        login.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
