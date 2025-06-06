@@ -1,0 +1,55 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7f8;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.question-block, .question-box {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.question-input, .option-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.options-container label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  background: #3f51b5;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2c3e9e;
+}
+
+.submit-btn {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1rem;
+}
