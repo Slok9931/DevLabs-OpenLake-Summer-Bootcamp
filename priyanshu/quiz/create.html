@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Create Quiz Question</h1>
+  <form id="questionForm">
+    <label>Question</label>
+    <input type="text" id="qText" required>
+
+    <label>Option A</label>
+    <input type="text" id="optionA" required>
+
+    <label>Option B</label>
+    <input type="text" id="optionB" required>
+
+    <label>Option C</label>
+    <input type="text" id="optionC" required>
+
+    <label>Option D</label>
+    <input type="text" id="optionD" required>
+
+    <label>Correct Option (A/B/C/D)</label>
+    <input type="text" id="correctOption" maxlength="1" required>
+
+    <button type="submit">Add Question</button>
+  </form>
+
+  <p><a href="quiz.html">Start the Quiz</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
