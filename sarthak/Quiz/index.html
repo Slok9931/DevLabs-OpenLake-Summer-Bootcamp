@@ -51,33 +51,6 @@
     </form>
   </div>
 
-  <script>
-    document.getElementById("createForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const question = document.querySelector('input[placeholder="Enter your question"]').value;
-      const inputs = document.querySelectorAll('input');
-      const options = [inputs[1].value, inputs[2].value, inputs[3].value, inputs[4].value];
-      const correct = document.querySelector('select').value;
-
-      const newQuestion = {
-        question: question,
-        options: {
-          A: options[0],
-          B: options[1],
-          C: options[2],
-          D: options[3]
-        },
-        correct: correct
-      };
-
-      const quizData = JSON.parse(localStorage.getItem("quizData") || "[]");
-      quizData.push(newQuestion);
-      localStorage.setItem("quizData", JSON.stringify(quizData));
-
-      alert("Question added!");
-      this.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
