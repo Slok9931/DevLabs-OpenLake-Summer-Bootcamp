@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Sign Up Page</h1>
-    <p>Already have an account? <a href="login.html">Login</a></p>  
-    <form class="form-container">
-        <div class="form-group"> 
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required placeholder="Enter username">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter email">
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required placeholder="Enter password">
-        </div>
-        <div class="form-group">
-            <label for="password">Confirm Password:</label>
-            <input type="password" id="password" name="password" required placeholder="Confirm your password">
-        </div>
-        <button type="submit">Submit</button>  
-    </form>
+    <main class="main-container">
+        <h1>Sign Up Page</h1>
+        <form class="form-container" id="signupform" onsubmit="signup(event)">   
+            <div class="form-group"> 
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required placeholder="Confirm your password">
+            </div>
+            <button type="submit">Sign Up</button>  
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>  
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Authentication System</title>
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    <h1 Authentication System</h1>
-    <div class="form-container"> 
-        <div class="form-group row-style">   
-            <p> <strong>Already having an Account</strong> </p>
-            <button onclick="location.href='login.html'">Login</button>
+    <main class="main-container">
+        <h1>Authentication System</h1>
+        
+        <div class="form-container"> 
+            <div class="form-group row-style">   
+                <p><strong>Already have an Account?</strong></p>
+                <button onclick="location.href='login.html'">Login</button>
+            </div>
+            <div class="form-group row-style">   
+                <p><strong>Don't have an Account?</strong></p>
+                <button onclick="location.href='signup.html'">Sign Up</button>
+            </div>
         </div>
-        <div class="form-group row-style">   
-            <p> <strong>Create an Account</strong></p>
-            <button onclick="location.href='SignUp.html'"> SignUp</button>
-        </div>
-    </div>
-    
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
