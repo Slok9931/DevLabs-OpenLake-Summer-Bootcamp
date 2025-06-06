@@ -41,7 +41,7 @@ function addQuestion() {
             }
         }
 
-        if (questionText === '') {
+        if (questionText === '' || options.length < 2) {
             alert('Please enter a valid question and at least 2 options.');
             return;
         }
@@ -55,15 +55,21 @@ function addQuestion() {
             return q && q.question && q.options.length >= 2;
         });
         localStorage.setItem('quizData', JSON.stringify(validQuestions));
-
         saveBtn.disabled = true;
         saveBtn.textContent = 'Saved!';
     };
+
+    var cancelBtn = document.createElement('button');
+    cancelBtn.textContent = 'Cancel';
+    cancelBtn.onclick = function() {
+        questionDiv.remove();
+    }
 
     questionDiv.appendChild(questionInput);
     questionDiv.appendChild(optionList);
     questionDiv.appendChild(addOptionBtn);
     questionDiv.appendChild(saveBtn);
+    questionDiv.appendChild(cancelBtn);
 
     document.getElementById('questions-container').appendChild(questionDiv);
 
@@ -87,25 +93,27 @@ function generateQuiz() {
 const quizData = JSON.parse(localStorage.getItem('quizData') || '[]');
 const container = document.getElementById('quiz-container');
 
-let html = '';
-
-for (let i = 0; i < quizData.length; i++) {
-    const q = quizData[i];
-    html += `
-      <div class="question-box">
-        <p><strong>Question ${i + 1}:</strong> ${q.question}</p>
-        <ul>
-          ${q.options.map(opt => `
-            <li>
-              <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label>
-            </li>
-          `).join('')}
-        </ul>
-      </div>
-    `;
+if (quizData.length === 0) {
+    container.innerHTML = '<p>No quiz has been generated yet.</p>';
+} else {
+    let html = '';
+    for (let i = 0; i < quizData.length; i++) {
+        const q = quizData[i];
+        html += `
+        <div class="question-box">
+          <p><strong>Question ${i + 1}:</strong> ${q.question}</p>
+          <ul>
+            ${q.options.map(opt => `
+              <li>
+                <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
 }
-
-container.innerHTML = html;
 
 function submitAnswers() {
     alert('Answers submitted.');
