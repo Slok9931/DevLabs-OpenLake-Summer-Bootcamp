@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1 id="k">QUIZ</h1>
+  <form id="quizform">
+    <label class="b" for="question1">1. What is the capital of France?</label><br>
+    <input type="radio" name="question1" value="a"> A) Berlin<br>
+    <input type="radio" name="question1" value="b"> B) Madrid<br>
+    <input type="radio" name="question1" value="c"> C) Paris<br>
+    <input type="radio" name="question1" value="d"> D) Rome<br><br>
+
+    <label class="b" for="question2">2. What is 2 + 2?</label><br>
+    <input type="radio" name="question2" value="a"> A) 3<br>
+    <input type="radio" name="question2" value="b"> B) 4<br>
+    <input type="radio" name="question2" value="c"> C) 5<br>
+    <input type="radio" name="question2" value="d"> D) 6<br><br>
+
+    <label class="b" for="question3">3. What is 3*2?</label><br>
+    <input type="radio" name="question3" value="a"> A) 6<br>
+    <input type="radio" name="question3" value="b"> B) 4<br>
+    <input type="radio" name="question3" value="c"> C) 5<br>
+    <input type="radio" name="question3" value="d"> D) 7<br><br>
+
+    <label class="b" for="question4">4. What is 6%2?</label><br>
+    <input type="radio" name="question4" value="a"> A) 3<br>
+    <input type="radio" name="question4" value="b"> B) 4<br>
+    <input type="radio" name="question4" value="c"> C) 5<br>
+    <input type="radio" name="question4" value="d"> D) 6<br><br>
+
+    <label class="b" for="question5">5. What is 8-2?</label><br>
+    <input type="radio" name="question5" value="a"> A) 3<br>
+    <input type="radio" name="question5" value="b"> B) 4<br>
+    <input type="radio" name="question5" value="c"> C) 5<br>
+    <input type="radio" name="question5" value="d"> D) 6<br><br>
+
+    <button id="m" type="submit">Submit</button>
+  </form>
+
+  <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+  <!-- This will be hidden by default -->
+<button id="n" style="display: none; margin-top: 10px;">
+  <a href="answer.html" style="text-decoration: none; color: inherit;">Correct Answer</a>
+</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
