@@ -1,0 +1,23 @@
+#k{
+  color:red
+}
+
+.b{
+  color:red;
+}
+
+body{
+  background-color:aquamarine;
+  text-align:center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  margin:10px;
+  border:20px solid black;
+  padding:10px
+
+}
+
+#m{
+  background-color: blueviolet;
+  color:"black";
+}
